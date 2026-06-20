@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Akash — Network Security Engineer</title>
+<meta name="description" content="Portfolio of M. Akash — Network & Cloud Security Engineer specializing in AWS, Linux hardening, and DevOps security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--surface:#f8f9fa;--surface-2:#f1f3f5;--text:#111;--text-2:#555;--muted:#888;--border:#e5e7eb;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:700}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.header{padding:18px 0;position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid var(--border)}
+.header .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:.02em}
+.nav{display:flex;gap:28px;list-style:none}
+.nav a{font-size:.9rem;font-weight:600;color:var(--text-2);transition:color .2s}
+.nav a:hover{color:var(--text)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surface);border:1px solid var(--border);border-radius:50px;font-size:.82rem;font-weight:600;color:var(--text-2);margin-bottom:24px}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;margin-bottom:20px;letter-spacing:-.02em}
+.hero p{font-size:1.1rem;color:var(--text-2);max-width:520px;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .25s;border:2px solid transparent}
+.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{transform:translateY(-2px);background:#333}
+.btn-outline{background:transparent;color:var(--text);border-color:var(--text)}.btn-outline:hover{background:var(--text);color:#fff}
+.hero-image{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-image img{width:360px;height:360px;object-fit:cover;object-position:center 20%;border-radius:50%;border:4px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.float{position:absolute;padding:8px 16px;background:var(--bg);border:1px solid var(--border);border-radius:50px;font-size:.78rem;font-weight:700;color:var(--text);box-shadow:0 4px 20px rgba(0,0,0,.08);animation:fl 3s ease-in-out infinite}
+.f1{top:8%;left:0}.f2{top:28%;right:0;animation-delay:.5s}.f3{bottom:18%;left:-10px;animation-delay:1s}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.section{padding:90px 0}.alt{background:#fafafa}
+.head{text-align:center;margin-bottom:50px}
+.head h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:10px;letter-spacing:-.02em}
+.head p{color:var(--text-2);font-size:1.05rem;max-width:580px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:30px 22px;text-align:center}
+.stat-v{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:8px}
+.stat-l{font-size:.9rem;color:var(--text-2);font-weight:500}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:22px}
+.tool{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:30px 18px;text-align:center;transition:all .25s}
+.tool:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.08);border-color:var(--muted)}
+.tool img{width:64px;height:64px;margin:0 auto 14px;object-fit:contain}
+.tool h4{font-size:1rem;margin-bottom:4px}.tool span{font-size:.78rem;color:var(--muted);font-weight:500}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.project{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .25s}
+.project:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.p-img{height:140px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--text-2);letter-spacing:.04em}
+.p-body{padding:24px}
+.p-body h4{font-size:1.1rem;margin-bottom:14px;padding-bottom:10px;position:relative}
+.p-body h4::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--text),var(--muted))}
+.p-body ul{list-style:disc outside;padding-left:1.2rem;margin:0 0 14px;color:var(--text-2);font-size:.92rem;line-height:1.65}
+.p-body li{margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:4px 12px;background:var(--bg);border:1px solid var(--border);border-radius:50px;font-size:.74rem;font-weight:600;color:var(--text-2)}
+.exp{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:30px;max-width:760px;margin:0 auto}
+.exp h4{font-size:1.15rem;margin-bottom:4px}
+.exp-meta{font-size:.88rem;color:var(--muted);margin-bottom:14px;font-weight:500}
+.exp ul{padding-left:20px;color:var(--text-2);font-size:.94rem}.exp li{margin-bottom:6px}
+.contacts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:900px;margin:0 auto}
+.contact{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;text-align:center;transition:all .25s;display:block}
+.contact:hover{transform:translateY(-3px);border-color:var(--muted)}
+.c-icon{width:52px;height:52px;margin:0 auto 12px;background:var(--bg);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.contact h4{font-size:.95rem;margin-bottom:4px}
+.contact span{font-size:.82rem;color:var(--text-2);font-weight:500;word-break:break-all}
+.footer{padding:36px 0;text-align:center;border-top:1px solid var(--border);color:var(--muted);font-size:.88rem}
+@media(max-width:992px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero p{margin:0 auto 32px}.btns{justify-content:center}.hero-image{order:-1}.hero-image img{width:260px;height:260px}.stats{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}.contacts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:576px){.nav{display:none}.stats,.contacts{grid-template-columns:1fr}.tools{grid-template-columns:repeat(2,1fr)}.hero-image img{width:220px;height:220px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container">
+<div class="logo">M.AKASH</div>
+<nav><ul class="nav">
+<li><a href="#about">About</a></li><li><a href="#tools">Skills</a></li>
+<li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<section class="hero"><div class="container hero-inner">
+<div>
+<div class="badge">Network Security Engineer · Immediate Joiner</div>
+<h1>Securing Networks &amp; Cloud Infrastructure</h1>
+<p>Hi, I'm Akash — a Network &amp; Cloud Security engineer hardening AWS, Linux servers, and CI/CD pipelines with hands-on experience in firewalls, VPNs, IAM, and log-driven incident response.</p>
+<div class="btns"><a href="#contact" class="btn btn-primary">Hire Me</a><a href="#projects" class="btn btn-outline">View Projects</a></div>
+</div>
+<div class="hero-image">
+<img src="assets/akash.png" alt="M. Akash">
+<div class="float f1">AWS Security</div>
+<div class="float f2">Linux Hardening</div>
+<div class="float f3">VPN · Firewall</div>
+</div>
+</div></section>
+
+<section class="section" id="about" style="padding-top:60px"><div class="container">
+<div class="head"><h2>Impact at a Glance</h2><p>Measurable security and reliability outcomes delivered through automation.</p></div>
+<div class="stats">
+<div class="stat"><div class="stat-v">80%</div><div class="stat-l">Less Log-Review Time</div></div>
+<div class="stat"><div class="stat-v">99.9%</div><div class="stat-l">Simulated Uptime</div></div>
+<div class="stat"><div class="stat-v">60s</div><div class="stat-l">Auto-Scale Response</div></div>
+<div class="stat"><div class="stat-v">10+</div><div class="stat-l">Zero-Touch Deploys</div></div>
+</div></div></section>
+
+<section class="section alt" id="tools"><div class="container">
+<div class="head"><h2>Security &amp; Cloud Toolbox</h2><p>The stack I use to secure, monitor and automate modern infrastructure.</p></div>
+<div class="tools">
+<div class="tool"><img src="assets/aws.svg" alt="AWS"><h4>AWS</h4><span>Cloud Platform</span></div>
+<div class="tool"><img src="assets/Prometheus.png" alt="Prometheus"><h4>Prometheus</h4><span>Monitoring</span></div>
+<div class="tool"><img src="assets/docker.png" alt="Docker"><h4>Docker</h4><span>Containerization</span></div>
+<div class="tool"><img src="assets/kubernetes.png" alt="Kubernetes"><h4>Kubernetes</h4><span>Orchestration</span></div>
+<div class="tool"><img src="assets/Jenkins.png" alt="Jenkins"><h4>Jenkins</h4><span>CI/CD Security</span></div>
+<div class="tool"><img src="assets/ansible.png" alt="Ansible"><h4>Ansible</h4><span>Configuration Mgmt</span></div>
+<div class="tool"><img src="assets/grafana.png" alt="Grafana"><h4>Grafana</h4><span>Visualization</span></div>
+<div class="tool"><img src="assets/git.png" alt="Git"><h4>Git</h4><span>Version Control</span></div>
+<div class="tool"><img src="assets/github.png" alt="GitHub"><h4>GitHub</h4><span>Code Repository</span></div>
+</div></div></section>
+
+<section class="section" id="projects"><div class="container">
+<div class="head"><h2>Featured Projects</h2><p>Real-world security &amp; cloud projects from my portfolio.</p></div>
+<div class="projects">
+<div class="project"><div class="p-img">Logs</div><div class="p-body">
+<h4>Linux Log Analyzer</h4>
+<ul><li>Automated Bash + regex tool parsing /var/log/auth.log &amp; syslog on Ubuntu.</li>
+<li>Cron-scheduled every 15 min, generating structured HTML security reports.</li>
+<li>Surfaces failed SSH logins and critical errors for incident response.</li>
+<li>Reduced manual log-review time by ~80%.</li></ul>
+<div class="tags"><span class="tag">Bash</span><span class="tag">Linux</span><span class="tag">Regex</span><span class="tag">Cron</span></div>
+</div></div>
+
+<div class="project"><div class="p-img">Network</div><div class="p-body">
+<h4>Enterprise Network Security Setup</h4>
+<ul><li>Designed secure topology with routers, switches and firewalls for segmentation.</li>
+<li>Configured site-to-site &amp; remote-access VPNs across branch offices.</li>
+<li>Defined firewall rules and ACLs to enforce least-privilege access.</li>
+<li>Performed vulnerability assessments and patching of network devices.</li></ul>
+<div class="tags"><span class="tag">Firewalls</span><span class="tag">VPN</span><span class="tag">ACLs</span><span class="tag">VA</span></div>
+</div></div>
+
+<div class="project"><div class="p-img">Cloud</div><div class="p-body">
+<h4>AWS Auto-Scaling Web Hosting</h4>
+<ul><li>Custom VPC with security groups and network segmentation on AWS.</li>
+<li>ELB + Auto Scaling (min 2 / max 5) with CPU-threshold triggers.</li>
+<li>Achieved 99.9% simulated uptime; scale-out within 60 seconds.</li>
+<li>Hardened EC2 instances with IAM least-privilege roles.</li></ul>
+<div class="tags"><span class="tag">AWS</span><span class="tag">VPC</span><span class="tag">EC2</span><span class="tag">ELB</span></div>
+</div></div>
+
+<div class="project"><div class="p-img">CI/CD</div><div class="p-body">
+<h4>Secure CI/CD Pipeline</h4>
+<ul><li>End-to-end Jenkins pipeline for build, test and Docker deployment.</li>
+<li>GitHub webhook triggers; SSH delivery to hardened Linux server.</li>
+<li>Cut release time from ~30 min to under 5 min across 10+ builds.</li>
+<li>Integrated security checks into the CI/CD flow.</li></ul>
+<div class="tags"><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">GitHub</span><span class="tag">SSH</span></div>
+</div></div>
+</div></div></section>
+
+<section class="section alt" id="experience"><div class="container">
+<div class="head"><h2>Experience</h2><p>Professional journey securing networks and cloud platforms.</p></div>
+<div class="exp"><h4>Network Security Engineer</h4>
+<div class="exp-meta">Thangam Enterprises · Apr 2026 – Jun 2026 · Full-Time</div>
+<ul><li>Monitored and secured network infrastructure to ensure CIA of organizational resources.</li>
+<li>Configured and maintained firewalls, VPNs, routers and switches for secure connectivity.</li>
+<li>Implemented security policies and ran vulnerability assessments to remediate risks.</li>
+<li>Performed system hardening and patch management to reduce attack surface.</li>
+<li>Carried out log analysis and security monitoring for prompt incident response.</li></ul></div>
+<div class="exp" style="margin-top:24px"><h4>Network Security Engineer Intern</h4>
+<div class="exp-meta">Thangam Enterprises · Jan 2026 – Mar 2026 · Internship</div>
+<ul><li>Monitored network traffic and assisted in configuring firewalls, VPNs, routers and switches.</li>
+<li>Supported security-policy implementation and vulnerability assessment activities.</li>
+<li>Hands-on exposure to system hardening, patch management and log analysis.</li></ul></div>
+</div></section>
+
+<section class="section" id="contact"><div class="container">
+<div class="head"><h2>Get In Touch</h2><p>Open to Network Security, Cloud Security and SOC opportunities.</p></div>
+<div class="contacts">
+<a class="contact" href="mailto:m.s.akash9944@gmail.com"><div class="c-icon">@</div><h4>Email</h4><span>m.s.akash9944@gmail.com</span></a>
+<a class="contact" href="tel:+919487110365"><div class="c-icon">☎</div><h4>Phone</h4><span>+91 94871 10365</span></a>
+<a class="contact" href="https://www.linkedin.com/in/makashlin" target="_blank"><div class="c-icon">in</div><h4>LinkedIn</h4><span>linkedin.com/in/makashlin</span></a>
+<a class="contact" href="https://github.com/Akashms9944" target="_blank"><div class="c-icon">&lt;/&gt;</div><h4>GitHub</h4><span>github.com/Akashms9944</span></a>
+</div></div></section>
+
+<footer class="footer"><div class="container"><p>© 2026 M. Akash · Network Security Engineer · Chennai, India</p></div></footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',e=>{const h=a.getAttribute('href');if(h.length<2)return;
+const t=document.querySelector(h);if(!t)return;e.preventDefault();
+window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-70,behavior:'smooth'});});});
+</script>
+</body></html>
